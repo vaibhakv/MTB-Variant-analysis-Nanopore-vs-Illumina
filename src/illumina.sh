@@ -21,9 +21,9 @@ samtools faidx ${reference}
 
 samtools index ${outdir}${sample}.sorted.bam
 bcftools mpileup -Ou -f ${reference}.fa -o ${outdir}${sample}.pileup.bcf ${outdir}${sample}.sorted.bam
-### -Ou --> Output format: uncompressed bcf
-### -Ov --> Output format: uncompressed vcf
-bcftools call -m -v -Ou --ploidy 1 -o ${outdir}${sample}.call.bcf ${outdir}${sample}.pileup.bcf 
+# ### -Ou --> Output format: uncompressed bcf
+# ### -Ov --> Output format: uncompressed vcf
+bcftools call -m -v -Ou -o ${outdir}${sample}.call.bcf ${outdir}${sample}.pileup.bcf 
 ### -m --> default calling (not consensus calling)
 ### -v --> output only variants
 bcftools norm -Ou -f ${reference}.fa -d all -o ${outdir}${sample}.norm.bcf ${outdir}${sample}.call.bcf 
