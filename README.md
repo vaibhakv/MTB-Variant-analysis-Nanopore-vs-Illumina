@@ -25,4 +25,6 @@ Data:
 	+ Paired end `Short reads` - same sample IT1745 from Italy: Veneto
 	+ platform: `MiniSeq` with paired-end Nextera XT library
 
+![Alt text](https://github.com/vaibhakv/MTB-Variant-analysis-Nanopore-vs-Illumina/blob/master/screenshots/Screenshot%20from%202023-06-30%2020-55-37.png)
+
 
