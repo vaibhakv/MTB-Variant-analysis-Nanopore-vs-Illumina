@@ -1,7 +1,11 @@
 This directory contains the files generated during the analysis of
+-
 Reads: `Nanopore`
+-
 Reference genome assembly: `A70144_2`
+-
 Tools: `minimap2`, `samtools`, `medaka`, `longshot`
+--
 
 ```
 ├── medaka
