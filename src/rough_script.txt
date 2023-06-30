@@ -1,0 +1,27 @@
+minimap2 -d {reference}_index.mmi {reference}.fa
+minimap2 -ax map-ont -t 4 {reference}_index.mmi {sample}.fastq > {sample}.sam
+medaka_consensus -i {sample}.fastq -d {reference}.fa -o medaka/ -t 4 -m {model}
+samtools sort {sample}.sam -o {sample}.sorted.sam
+samtools view -bS {sample}.sorted.sam > {sample}.sorted.bam
+samtools index {sample}.sorted.bam 
+longshot --bam {sample}.sorted.bam --ref {reference}.fa --out {sample}_longshot.vcf
+
+
+
+bwa-mem2-2.2.1_x64-linux/bwa-mem2 index {reference}.fa
+bwa-mem2-2.2.1_x64-linux/bwa-mem2 mem -t 4 {reference}.fa {sample}_1.fastq {sample}_2.fastq > {sample}.sam
+bcftools mpileup -Ou -f r{reference}.fa -o {sample}.pileup.bcf {sample}.sorted.bam
+### -Ou --> Output format: uncompressed bcf
+bcftools call -m -v -Ou -o {sample}.call.bcf {sample}.pileup.bcf 
+### -m --> default calling (not consensus calling)
+### -v --> output only variants
+bcftools norm -Ou {reference}.fa -d all -o {sample}.norm.bcf {sample}.call.bcf 
+### -d --> which positions to consider.. all
+bcftools filter -Ou -e 'QUAL<40 || DP<10 || GT!="1/1"' -o {sample}.variants.bcf {sample}.norm.bcf
+### -e --> exclude these quality measures
+### -i --> include these quality measures
+### Quality measures --> QUAL - Phred quality
+###                      DP - Depth
+###                      GT - We only want homozygous variants, cause this is bacteria. Hence, haploid. Heterozygous variants are not ###			      likely to be true variants in case of bacteria. So GT!="1/1" just means, exclude all the variants that don't have Genotype ratio 1/1.
+			      	
+ 

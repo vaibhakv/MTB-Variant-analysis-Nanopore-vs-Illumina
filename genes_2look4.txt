@@ -1,0 +1,1 @@
+rpsL, atpE, gpsI, dprE1, dprE2, embC, embB, embA, rpsA, gidB, katG, inhA, ndh, ahpC, rpoB, pncA, embR, eis, whiB7, ethA, ethR, mshA, gyrA, gyrB, alrA, cycA, Rv0488, thyA, dfrA, folC, ribD, clpC, fabG1, panD, ddn, rpoA, rmlD, fbiAB, fbiC, fadE24, ald, pepQ, kasA, tlyA, rplC, Rv0678, rpoC, fgd1, iniA, mmpL3 and Rv1979c
