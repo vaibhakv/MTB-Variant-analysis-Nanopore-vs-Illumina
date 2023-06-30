@@ -25,6 +25,12 @@ Data:
 	+ Paired end `Short reads` - same sample IT1745 from Italy: Veneto
 	+ platform: `MiniSeq` with paired-end Nextera XT library
 
+
+* Comparison between the alignment and variants of nanopore and illumina in IGV.
+As you can see, we got significantly more variants from nanopore data than from illumina. But that doesn't mean they're all accurate. I'll add the detailed conclusiom of this analysis later.
+
+Btw this alignment was done using the reference genome assembly version CDC1551 which was available in IGV by default. The later ones we'll have to upload the reference.
+
 ![Alt text](https://github.com/vaibhakv/MTB-Variant-analysis-Nanopore-vs-Illumina/blob/master/screenshots/Screenshot%20from%202023-06-30%2020-55-37.png)
 
 
