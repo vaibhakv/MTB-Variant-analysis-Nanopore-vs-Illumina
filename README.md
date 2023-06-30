@@ -1,16 +1,17 @@
 Author: vaibhakv 
+-----
 Date: June 2023
 ------
 Aim:
 * Long reads 
-	+ Nanopore read alignment using Minimap2 
-	+ Creating consensus sequences using Medaka
-	+ Variant calling using Longshot
+	+ Nanopore read alignment using `minimap2` 
+	+ Creating consensus sequences using`medaka`
+	+ Variant calling using `longshot`
 
 
 * Short reads
-	+ Illumina short read alignment using bwa-mem2
-	+ Variant calling using bcftools 
+	+ Illumina short read alignment using `bwa-mem2`
+	+ Variant calling using `bcftools` 
 
 
 * Using different genome assemblies for carrying out the above methods and then comparing all the results.
