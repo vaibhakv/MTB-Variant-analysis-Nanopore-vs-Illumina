@@ -24,4 +24,4 @@ bcftools filter -Ou -e 'QUAL<40 || DP<10 || GT!="1/1"' -o {sample}.variants.bcf 
 ###                      DP - Depth
 ###                      GT - We only want homozygous variants, cause this is bacteria. Hence, haploid. Heterozygous variants are not ###			      likely to be true variants in case of bacteria. So GT!="1/1" just means, exclude all the variants that don't have Genotype ratio 1/1.
 			      	
- 
+ r941_min_sup_g507

@@ -1,7 +1,7 @@
-This directory contains the files generated during the analysis of 
+This directory contains the files generated during the analysis of
 Reads: `Illumina`
-Reference genome assembly: `A70144_2`
-Tools: `bwa-mem2`, `samtools`, `bcftools` 
+Reference genome assembly: `H37Rv`
+Tools: `bwa-mem2`, `samtools`, `bcftools`
 
 ```
 ├── SRR23086708_bcftools.vcf
@@ -13,3 +13,4 @@ Tools: `bwa-mem2`, `samtools`, `bcftools`
 ├── SRR23086708.sorted.bam.bai
 └── SRR23086708.sorted.sam
 ```
+
