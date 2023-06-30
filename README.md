@@ -32,7 +32,7 @@ As you can see, we got significantly more variants from nanopore data than from 
 
 Btw this alignment was done using the reference genome assembly version CDC1551 which was available in IGV by default. The later ones we'll have to upload the reference.
 
-![Alt text](https://github.com/vaibhakv/MTB-Variant-analysis-Nanopore-vs-Illumina/blob/master/screenshots/Screenshot%20from%202023-06-30%2020-55-37.png)
+![Alt text](https://github.com/vaibhakv/MTB-Variant-analysis-Nanopore-vs-Illumina/blob/master/screenshots/Screenshot%20from%202023-06-30%2021-49-55.png)
 
 After hiding indels of size `>5`
 
